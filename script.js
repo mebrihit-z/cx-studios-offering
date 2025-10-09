@@ -3,15 +3,17 @@ const websites = [
     {
         title: "Insites",
         description: "My personal portfolio showcasing my work and skills in web development.",
-        url: "https://example.com/portfolio",
-        icon: "💼",
+        url: "http://cxstudios-insites.s3-website.us-east-2.amazonaws.com",
+        icon: "💡",
+        // icon: "💼",
         tags: ["Portfolio", "Personal"]
     },
     {
         title: "Marketplace",
         description: "Supporting your freedom to create with Marketplace",
-        url: "https://example.com/shop",
-        icon: "🛍️",
+        url: "http://cx-marketplace.s3-website.us-east-2.amazonaws.com",
+        icon: "🛒",
+        // icon: "🛍️",
         tags: ["E-Commerce", "React"]
     },
     
