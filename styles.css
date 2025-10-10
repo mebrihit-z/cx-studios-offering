@@ -5,25 +5,26 @@
 }
 
 :root {
-    --primary-color: #667eea;
-    --secondary-color: #764ba2;
-    --accent-color: #f093fb;
-    --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --primary-color: #00A748;
+    --secondary-color: #569800;
+    --accent-color: #E7FFC9;
+    --background: #ffffff;
     --surface: #ffffff;
     --text-primary: #2d3748;
     --text-secondary: #718096;
     --border-color: #e2e8f0;
-    --card-bg: #ffffff;
+    --card-bg: #d4f4dd;
 }
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #ffffff;
     color: var(--text-primary);
     min-height: 100vh;
-    padding: 40px 20px;
+    padding: 20px;
     position: relative;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .background-decoration {
@@ -46,9 +47,9 @@ body {
 }
 
 .blob-1 {
-    width: 500px;
-    height: 500px;
-    background: linear-gradient(45deg, #f093fb, #f5576c);
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(45deg, #00A748, #43e97b);
     top: -200px;
     left: -200px;
     animation-delay: 0s;
@@ -57,7 +58,7 @@ body {
 .blob-2 {
     width: 400px;
     height: 400px;
-    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    background: linear-gradient(45deg, #569800, #38f9d7);
     bottom: -150px;
     right: -150px;
     animation-delay: -7s;
@@ -94,47 +95,47 @@ body {
 
 .header {
     text-align: center;
-    margin-bottom: 60px;
-    padding: 60px 20px 40px;
+    margin-bottom: 25px;
+    padding: 10px;
     animation: fadeInDown 0.8s ease-out;
 }
 
 .header-badge {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.25);
+    background: #d4f4dd;
     backdrop-filter: blur(10px);
-    color: white;
+    color: #00A748;
     padding: 8px 20px;
     border-radius: 50px;
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #00A748;
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
 
 .header h1 {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-weight: 900;
-    color: white;
-    margin-bottom: 15px;
+    color: #00A748;
+    margin-bottom: 10px;
     letter-spacing: -2px;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
     line-height: 1.1;
 }
 
 .subtitle {
-    font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.3rem;
+    color: #2d3748;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     letter-spacing: 1px;
 }
 
 .header-description {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    color: #718096;
     font-weight: 300;
     max-width: 600px;
     margin: 0 auto;
@@ -170,7 +171,7 @@ body {
 .search-box:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+    box-shadow: 0 0 0 3px rgba(0, 167, 72, 0.1);
 }
 
 .search-box::placeholder {
@@ -180,8 +181,8 @@ body {
 .websites-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 35px;
-    margin-bottom: 60px;
+    gap: 25px;
+    margin-bottom: 30px;
     animation: fadeInUp 0.8s ease-out 0.3s both;
 }
 
@@ -197,10 +198,10 @@ body {
 }
 
 .website-card {
-    background: var(--card-bg);
+    background: linear-gradient(135deg, #f8fdf9 0%, #e8f5ea 100%);
     border-radius: 24px;
-    padding: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border: 1px solid #b8e6c4;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
     position: relative;
@@ -216,7 +217,7 @@ body {
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+    background: linear-gradient(90deg, #00A748, #569800, #E7FFC9);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -228,7 +229,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(0, 167, 72, 0.05) 0%, rgba(86, 152, 0, 0.05) 100%);
     border-radius: 24px;
     z-index: 0;
     pointer-events: none;
@@ -241,8 +242,8 @@ body {
 
 .website-card:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 30px 80px rgba(102, 126, 234, 0.3);
-    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 30px 80px rgba(0, 167, 72, 0.3);
+    border-color: #00A748;
 }
 
 .website-card:hover::before {
@@ -252,7 +253,7 @@ body {
 .card-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00A748 0%, #569800 100%);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -260,13 +261,13 @@ body {
     font-size: 2.5rem;
     margin-bottom: 25px;
     color: white;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 167, 72, 0.3);
     transition: all 0.3s ease;
 }
 
 .website-card:hover .card-icon {
     transform: scale(1.1) rotate(-5deg);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 15px 40px rgba(0, 167, 72, 0.4);
 }
 
 .card-title {
@@ -292,19 +293,19 @@ body {
 }
 
 .tag {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(0, 167, 72, 0.1) 0%, rgba(86, 152, 0, 0.1) 100%);
     color: var(--primary-color);
     padding: 8px 16px;
     border-radius: 25px;
     font-size: 0.85rem;
     font-weight: 600;
-    border: 1.5px solid rgba(102, 126, 234, 0.2);
+    border: 1.5px solid rgba(0, 167, 72, 0.2);
     transition: all 0.3s ease;
 }
 
 .website-card:hover .tag {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
-    border-color: rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, rgba(0, 167, 72, 0.15) 0%, rgba(86, 152, 0, 0.15) 100%);
+    border-color: rgba(0, 167, 72, 0.4);
     transform: translateY(-2px);
 }
 
@@ -313,14 +314,14 @@ body {
     align-items: center;
     gap: 10px;
     color: white;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00A748 0%, #569800 100%);
     padding: 12px 28px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 167, 72, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -343,7 +344,7 @@ body {
 .card-link:hover {
     gap: 15px;
     transform: translateY(-2px);
-    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 167, 72, 0.4);
 }
 
 .card-link::after {
@@ -359,17 +360,17 @@ body {
 .no-results {
     text-align: center;
     padding: 80px 20px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #718096;
     font-size: 1.3rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: #f7fafc;
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #e2e8f0;
 }
 
 .footer {
-    margin-top: 80px;
-    padding: 40px 20px;
+    margin-top: 30px;
+    padding: 30px 20px;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -381,13 +382,17 @@ body {
 }
 
 .footer-content p {
-    color: rgba(255, 255, 255, 0.9);
+    color: #718096;
     font-size: 0.95rem;
     font-weight: 300;
     letter-spacing: 0.5px;
 }
 
 @media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+
     .header {
         padding: 40px 20px 30px;
     }
@@ -418,6 +423,7 @@ body {
 @media (max-width: 480px) {
     body {
         padding: 20px 15px;
+        overflow-y: auto;
     }
 
     .header h1 {
