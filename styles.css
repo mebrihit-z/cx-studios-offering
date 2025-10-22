@@ -43,6 +43,14 @@ body {
     overflow-x: auto;
 }
 
+/* Mobile Table - Hidden by default */
+.table-container-mobile {
+    display: none;
+    width: 100%;
+    max-width: 1200px;
+    overflow-x: auto;
+}
+
 .offerings-table {
     width: 100%;
     border-collapse: separate;
@@ -68,6 +76,7 @@ body {
     text-align: center;
     vertical-align: top;
     padding: 0;
+
 }
 
 .card-link-wrapper {
@@ -100,11 +109,10 @@ body {
     transform: translate(-50%, -50%);
     width: 350px;
     height: 274px;
-    background: linear-gradient(180deg, rgba(230, 255, 237, 0.3) 0%, rgba(200, 240, 215, 0.4) 100%);
-    opacity: 1;
+    background: linear-gradient(242.27deg, #569800 4%, #E7FFC9 43.62%, #00A748 85.58%);
+    opacity: 15%;
     border-radius: inherit;
 }
-
 .offering-title {
     position: absolute;
     top: 20.22px;
@@ -326,61 +334,187 @@ body {
 /* Responsive Design */
 @media (max-width: 1400px) {
     .offerings-page {
-        padding: 48px 32px;
+        padding: 24px 32px 64px;
+    }
+
+    .table-container {
+        max-width: 100%;
     }
 
     .cta-section {
         width: 100%;
-        max-width: 1196px;
-        padding: 82px 64px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .offerings-cards-container {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 32px;
-    }
-
-    .cta-section {
-        padding: 64px 48px;
+        max-width: 900px;
+        padding: 60px 48px;
     }
 
     .cta-heading {
         font-size: 42px;
         line-height: 48px;
-        white-space: normal;
-    }
-
-    .cta-description {
-        width: 100%;
-        max-width: 447px;
     }
 }
 
-@media (max-width: 768px) {
-    .offerings-page {
-        padding: 32px 24px;
-        gap: 32px;
-    }
-
-    .main-heading {
-        font-size: 36px;
+@media (max-width: 1200px) {
+    .offerings-table {
+        border-spacing: 20px 20px;
     }
 
     .offering-card {
-        width: 240px;
+        width: 300px;
+        height: 240px;
+    }
+
+    .offering-background {
+        width: 300px;
         height: 240px;
     }
 
     .offering-title {
-        font-size: 26px;
+        font-size: 24px;
+        top: 16px;
     }
 
-    .offering-icon {
-        width: 180px;
-        height: 180px;
+    .icon-marketplace-container {
+        top: 100px;
+        left: 150px;
+    }
+
+    .icon-marketplace {
+        width: 170px;
+        height: 170px;
+    }
+
+    .icon-insites-container {
+        top: 85px;
+        left: 145px;
+    }
+
+    .icon-insites {
+        width: 170px;
+        height: 170px;
+    }
+
+    .icon-content-lake-container {
+        top: 85px;
+        left: 145px;
+    }
+
+    .icon-content-lake {
+        width: 170px;
+        height: 170px;
+    }
+
+    .emoji-icon {
+        font-size: 60px;
+    }
+
+    .table-heading {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .offerings-page {
+        padding: 24px 24px 48px;
+        gap: 32px;
+    }
+
+    /* Hide desktop table */
+    .table-container {
+        display: none;
+    }
+
+    /* Show mobile table */
+    .table-container-mobile {
+        display: block;
+    }
+
+    .offerings-table-mobile {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 24px;
+    }
+
+    .offerings-table-mobile tbody tr {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 32px;
+    }
+
+    .mobile-header-cell {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0 0 12px 0;
+    }
+
+    .mobile-section-heading {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 1.2;
+        color: var(--primary-color);
+        margin: 0;
+    }
+
+    .mobile-card-cell {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .mobile-card-cell:empty {
+        display: none;
+    }
+
+    .card-link-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .offering-card {
+        width: 100%;
+        max-width: 500px;
+        height: 200px;
+    }
+
+    .offering-background {
+        width: 100%;
+        height: 200px;
+    }
+
+    .offering-title {
+        font-size: 28px;
+        top: 20px;
+    }
+
+    .icon-marketplace-container,
+    .icon-insites-container,
+    .icon-content-lake-container {
+        right: 20px;
+        left: auto;
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+    }
+
+    .icon-marketplace,
+    .icon-insites,
+    .icon-content-lake {
+        width: 140px;
+        height: 140px;
+    }
+
+    .offering-icon-emoji {
+        right: 30px;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+
+    .emoji-icon {
+        font-size: 70px;
     }
 
     .cta-section {
@@ -388,8 +522,68 @@ body {
     }
 
     .cta-heading {
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 36px;
+        line-height: 42px;
+        white-space: normal;
+    }
+
+    .cta-description {
+        width: 100%;
+        max-width: 400px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .offerings-page {
+        padding: 16px 16px 32px;
+        gap: 24px;
+    }
+
+    .mobile-section-heading {
+        font-size: 28px;
+    }
+
+    .offerings-table-mobile tbody tr {
+        gap: 16px;
+        margin-bottom: 28px;
+    }
+
+    .offering-card {
+        max-width: 100%;
+        height: 180px;
+    }
+
+    .offering-background {
+        height: 180px;
+    }
+
+    .offering-title {
+        font-size: 24px;
+        top: 16px;
+        left: 20px;
+        transform: none;
+        text-align: left;
+    }
+
+    .icon-marketplace,
+    .icon-insites,
+    .icon-content-lake {
+        width: 120px;
+        height: 120px;
+    }
+
+    .emoji-icon {
+        font-size: 60px;
+    }
+
+    .cta-section {
+        padding: 40px 24px;
+    }
+
+    .cta-heading {
+        font-size: 28px;
+        line-height: 34px;
     }
 
     .cta-description {
@@ -413,39 +607,66 @@ body {
 
 @media (max-width: 480px) {
     .offerings-page {
-        padding: 24px 16px;
+        padding: 12px 12px 24px;
+        gap: 20px;
     }
 
-    .main-heading {
-        font-size: 28px;
+    .mobile-section-heading {
+        font-size: 24px;
     }
 
-    .offerings-cards-container {
-        gap: 24px;
+    .offerings-table-mobile tbody tr {
+        gap: 12px;
+        margin-bottom: 24px;
     }
 
     .offering-card {
-        width: 200px;
-        height: 200px;
+        height: 160px;
+    }
+
+    .offering-background {
+        height: 160px;
     }
 
     .offering-title {
-        font-size: 22px;
-        top: 16px;
+        font-size: 20px;
+        top: 14px;
+        left: 16px;
     }
 
-    .offering-icon {
-        width: 150px;
-        height: 150px;
+    .icon-marketplace-container,
+    .icon-insites-container,
+    .icon-content-lake-container {
+        right: 10px;
+    }
+
+    .icon-marketplace,
+    .icon-insites,
+    .icon-content-lake {
+        width: 100px;
+        height: 100px;
+    }
+
+    .offering-icon-emoji {
+        right: 20px;
+    }
+
+    .emoji-icon {
+        font-size: 50px;
     }
 
     .cta-section {
-        padding: 32px 24px;
+        padding: 32px 20px;
     }
 
     .cta-heading {
-        font-size: 26px;
-        line-height: 32px;
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .cta-description {
+        font-size: 13px;
+        line-height: 18px;
     }
 }
 
