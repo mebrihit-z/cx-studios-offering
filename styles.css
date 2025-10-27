@@ -856,21 +856,33 @@ body {
     }
     
     .cta-section {
-        padding: 60px 40px;
+        padding: 50px 30px;
+        margin: 0;
     }
     
     .cta-title {
-        font-size: 42px;
+        font-size: 38px;
+        white-space: normal;
+        line-height: 1.2;
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .cta-description {
+        font-size: 15px;
+        max-width: 100%;
     }
     
     .cta-form {
         flex-direction: column;
         align-items: center;
+        gap: 12px;
     }
     
     .cta-input {
         width: 100%;
-        max-width: 286px;
+        max-width: 280px;
     }
 }
 
@@ -891,11 +903,22 @@ body {
     }
     
     .cta-title {
-        font-size: 36px;
+        font-size: 32px;
+        white-space: normal;
+        line-height: 1.2;
+        text-align: center;
+        max-width: 350px;
+        margin: 0 auto;
     }
     
     .cta-section {
-        padding: 40px 24px;
+        padding: 50px 30px;
+        margin: 0;
+    }
+    
+    .cta-description {
+        font-size: 14px;
+        max-width: 100%;
     }
     
     /* Tablet card adjustments */
@@ -927,11 +950,39 @@ body {
     }
     
     .cta-title {
-        font-size: 28px;
+        font-size: 24px;
+        white-space: normal;
+        line-height: 1.2;
+        text-align: center;
+        max-width: 280px;
+        margin: 0 auto;
     }
     
     .cta-section {
-        padding: 32px 16px;
+        padding: 40px 20px;
+        margin: 0;
+    }
+    
+    .cta-description {
+        font-size: 13px;
+        max-width: 100%;
+    }
+    
+    .cta-form {
+        gap: 10px;
+    }
+    
+    .cta-input {
+        width: 100%;
+        max-width: 250px;
+        height: 38px;
+        font-size: 14px;
+    }
+    
+    .cta-button {
+        height: 38px;
+        font-size: 14px;
+        padding: 8px 12px;
     }
     
     /* Mobile card adjustments */
